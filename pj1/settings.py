@@ -83,12 +83,12 @@ WSGI_APPLICATION = 'pj1.wsgi.application'
 #DATABASES['default']  = dj_database_url.config()
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'app1_db',
-        'USER': 'b0a71c68a993b0',
-        'PASSWORD': 'c22ad150',
-        'HOST': 'mysql://b0a71c68a993b0:c22ad150@us-cdbr-iron-east-05.cleardb.net/heroku_c7676db4a5ed9b9?reconnect=true',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dcs4jcbi9qdtse',
+        'USER': 'aeshlmrogjnker',
+        'PASSWORD': 'b3deac32f132d8e0644cf6905d929ea52675afc53b4f71bb4b44b752304892f8',
+        'HOST': 'ec2-54-243-253-17.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
