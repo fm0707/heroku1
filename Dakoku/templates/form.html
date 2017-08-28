@@ -1,0 +1,59 @@
+{% load staticfiles %}
+
+<!-- Adjust  bootstrap  navbar -->
+body { padding-top: 40px; }
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>打刻</title>
+
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap-theme.min.css' %}" rel="stylesheet">
+    <script src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/dakoku.js' %}"></script>
+    <script type="text/javascript">
+        
+    
+    </script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">App1</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">出退勤登録</a></li>
+            <li><a href="#">Function 2</a></li>
+            <li><a href="#">Function 3</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-header">打刻</h1>
+            <form id = "frm_dakoku" action="" method="POST">
+            {% csrf_token %}
+            {{ form.text.as_hidden }}
+           <button  type="button" id="btn_start">出勤</button>
+           <button  type="button" id="btn_end">退勤</button>
+           </form>
+    </div><!-- /.container -->
+
+  </body>
+</html>
