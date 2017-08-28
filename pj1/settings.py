@@ -78,9 +78,19 @@ WSGI_APPLICATION = 'pj1.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-import dj_database_url
+#import dj_database_url
 
-DATABASES['default']  = dj_database_url.config()
+#DATABASES['default']  = dj_database_url.config()
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'app1_db',
+        'USER': 'b0a71c68a993b0',
+        'PASSWORD': 'c22ad150',
+        'HOST': 'mysql://b0a71c68a993b0:c22ad150@us-cdbr-iron-east-05.cleardb.net/heroku_c7676db4a5ed9b9?reconnect=true',
+        'PORT': '3306',
+    }
+}
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
