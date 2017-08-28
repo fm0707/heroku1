@@ -1,1 +1,1 @@
-web: gunicorn myDjango.wsgi --log-file -
+web: gunicorn pj1.wsgi --log-file -
