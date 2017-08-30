@@ -47,11 +47,13 @@ body { padding-top: 40px; }
 
     <div class="container">
         <h1 class="page-header">打刻</h1>
+        <p>ようこそ、{{username}}さん</p>
             <form id = "frm_dakoku" action="" method="POST">
             {% csrf_token %}
             {{ form.text.as_hidden }}
-           <button  type="button" id="btn_start">出勤</button>
-           <button  type="button" id="btn_end">退勤</button>
+           <button  type="button" class="btn btn-primary" id="btn_start">出勤</button>
+           &nbsp;&nbsp;&nbsp;
+           <button  type="button" class="btn btn-warning" id="btn_end">退勤</button>
            </form>
     </div><!-- /.container -->
 
