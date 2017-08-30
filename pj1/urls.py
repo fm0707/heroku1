@@ -21,4 +21,5 @@ urlpatterns = [
     url(r'^app1/', include('app1.urls', namespace = 'app1')),
     url(r'accounts/', include('accounts.urls')),
     url(r'dakoku/', include('Dakoku.urls')),
+    url(r'logout/', include('Dakoku.urls')),
 ]

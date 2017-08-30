@@ -4,13 +4,13 @@
 
 {% if form.errors  %}
   <div class="alert alert-danger" role="alert">
-    <p>Your usernamne and password didn't match. Please try again.</p>
+    <p>ユーザ名かパスワードが違います。</p>
   </div>
 {% endif %}
 
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title text-center">Log-in to mysite</h3>
+    <h3 class="panel-title text-center">ログイン</h3>
   </div>
   <div class="panel-body">
     <form action="{% url 'login' %}" method="post" role="form">
