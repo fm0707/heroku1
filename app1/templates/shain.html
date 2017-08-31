@@ -57,8 +57,8 @@ body { padding-top: 40px; }
                 <tr>
                     <td>{{ shain.id }}</td>
                     <td>{{ shain.last_name }}{{ shain.first_name }}</td>
-                    <td>{{ shain.start_time }}</td>
-                    <td>{{ shain.end_time }}</td>
+                    <td>{{ shain.start_time }}<br/>{{ s_location }}</td>
+                    <td>{{ shain.end_time }}<br/>{{ e_location }}</td>
                     
                 </tr>
                 {% endfor %}

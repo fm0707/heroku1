@@ -20,14 +20,13 @@ def dakoku(request):
         login_user = request.user
         status = request.POST["text"]
         
-        
-        logger.info(request.POST["location"])
-        
-        
+        location = request.POST["location"]
+        logger.info(location)
+             
         t = datetime.now(timezone('UTC'))
         logger.info(t)
         
-        wh = WorkHistory(user=login_user, status=status, update_date=t)
+        wh = WorkHistory(user=login_user, status=status, update_date=t, location=location)
         wh.save()
         
         return render(request, 'form.html',  { 'form' :  form , 'username': username, 'msg':  '打刻しました'})
