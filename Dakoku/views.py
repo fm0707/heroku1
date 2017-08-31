@@ -14,10 +14,14 @@ def dakoku(request):
     logger = logging.getLogger('command')
     shain = User.objects.get(id= request.user.id)
     username = shain.first_name
+    msg = ''
     if request.method == 'POST' :
         form = DakokuForm(request.POST)
         login_user = request.user
         status = request.POST["text"]
+        
+        
+        logger.info(request.POST["location"])
         
         
         t = datetime.now(timezone('UTC'))
@@ -26,7 +30,7 @@ def dakoku(request):
         wh = WorkHistory(user=login_user, status=status, update_date=t)
         wh.save()
         
-        return render(request, 'form.html',  { 'form' :  form , 'username': username })
+        return render(request, 'form.html',  { 'form' :  form , 'username': username, 'msg':  '打刻しました'})
     else:	
         form = DakokuForm()
         return render(request, 'form.html', {'form': form, 'username': username})

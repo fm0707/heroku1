@@ -25,6 +25,7 @@ class WorkHistory(models.Model):
     user = models.ForeignKey(User)
     update_date = models.DateTimeField(verbose_name='update_date')
     status = models.CharField(verbose_name='status', choices=status_list, blank = True, max_length=2)
+    location = models.CharField(verbose_name='location', blank = True, max_length=500)
     
     def  __str__(self):
         return self.user

@@ -51,11 +51,15 @@ body { padding-top: 40px; }
             <form id = "frm_dakoku" action="" method="POST">
             {% csrf_token %}
             {{ form.text.as_hidden }}
+            {{ form.location.as_hidden }}
            <button  type="button" class="btn btn-primary" id="btn_start">出勤</button>
            &nbsp;&nbsp;&nbsp;
            <button  type="button" class="btn btn-warning" id="btn_end">退勤</button>
            </form>
     </div><!-- /.container -->
+    <div class="container">
+        <p id ="msg">{{ msg }}</p>
+    </div>
 
   </body>
 </html>
